@@ -37,40 +37,53 @@ function App() {
   }
 
   return (
-    <>
-      <button onClick={switchTempMode}>Switch</button>
+    <div id='wrapper'>
+      {
+        sourceTemp === 'celsius' &&
+        <button id='switch-button' 
+        onClick={switchTempMode}>C &gt; F</button>
+      }
+      {
+        sourceTemp === 'fahrenheit' &&
+        <button id='switch-button' 
+        onClick={switchTempMode}>F &gt; C</button>
+      }
       
       {
         sourceTemp === 'celsius' &&
-        <>
-          <label htmlFor='celsius'>Celsius</label>
+        <div className='temperature-input'>
+          <label htmlFor='celsius' >
+            Celsius
           <input 
           inputMode='decimal'
           id='celsius' 
-          name='celsius' 
+          name='celsius'
           value={celsius} 
           onChange={(e) => setCelsius(e.target.value)}/>
-        </>
+          </label>
+        </div>
       }
 
       {
         sourceTemp === 'fahrenheit' &&
-        <>
-          <label htmlFor='fahrenheit'>Fahrenheit</label>
-          <input 
-          inputMode='decimal'
-          id='fahrenheit' 
-          name='fahrenheit' 
-          value={fahrenheit} 
-          onChange={(e) => setFahrenheit(e.target.value)}/>
-        </>
+        <div className='temperature-input'>
+          <label htmlFor='fahrenheit'>
+            Fahrenheit
+            <input 
+            inputMode='decimal'
+            id='fahrenheit' 
+            name='fahrenheit' 
+            value={fahrenheit} 
+            onChange={(e) => setFahrenheit(e.target.value)}/>
+          </label>
+        </div>
       }
 
 
       <div id='output'>{`Output: ${output}`}</div>
-      <button onClick={convertTemperature}>Convert</button>
+      <button onClick={convertTemperature} id='convert-button'>Convert</button>
       <button onClick={check}>check</button>
-    </>
+    </div>
   );
 }
 
