@@ -1,5 +1,5 @@
 ## Application to convert Celsius to Fahrenheit or vice versa
-This application is can be accessed at below url.<br/>
+This application can be accessed at below url.<br/>
 https://SohtaInoguchi.github.io/temperature-converter
 
 ## How to build and deploy the application
