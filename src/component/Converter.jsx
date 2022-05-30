@@ -8,11 +8,6 @@ export default function Converter() {
     const [output, setOutput] = useState('');
     const [sourceTemp, setSourceTemp] = useState('celsius');
 
-    const check = (e) => {
-        e.preventDefault();
-        console.log(typeof fahrenheit, typeof celsius);
-      }
-
     const isNumber = (input) => {
       if (input.trim() === '') {
         return false;
@@ -106,7 +101,6 @@ export default function Converter() {
         {sourceTemp === 'fahrenheit' &&
           <div id='output'>{`Celsius: ${output}`} &#8451;</div>
         }
-        <button onClick={check}>check</button>
       {/* </section> */}
     </div>  
     )
