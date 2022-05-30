@@ -10,10 +10,22 @@ export default function Converter() {
 
     const check = (e) => {
         e.preventDefault();
-        console.log(fahrenheit);
+        console.log(typeof fahrenheit, typeof celsius);
       }
+
+    const isNumber = (input) => {
+      if (input.trim() === '') {
+        return false;
+      }
+      return !isNaN(input);
+    }      
     
       const convertTemperature = () => {
+        const inputToBeValidated = sourceTemp === 'celsius' ? celsius : fahrenheit;
+        if (!isNumber(inputToBeValidated)) {
+          alert('Please enter number');
+          return;
+        }
         let targetTemp;
         if (sourceTemp === 'celsius') {
           // Formula (0°C × 9/5) + 32 = 32°F
@@ -24,6 +36,8 @@ export default function Converter() {
           targetTemp = (fahrenheit - 32) * 0.5556;
         }
         setOutput(targetTemp);
+        setCelsius('');
+        setFahrenheit('');
       }
     
       const switchTempMode = () => {
@@ -84,10 +98,10 @@ export default function Converter() {
           </div>
         }
         {sourceTemp === 'celsius' && 
-          <div id='output'>{`Output: ${output}`} &#8451;</div>
+          <div id='output'>{`Ceslius: ${output}`} &#8451;</div>
         }
         {sourceTemp === 'fahrenheit' &&
-          <div id='output'>{`Output: ${output}`} &#8457;</div>
+          <div id='output'>{`Fahrenheit: ${output}`} &#8457;</div>
         }
         <button onClick={convertTemperature} id='convert-button'>Convert</button>
         <button onClick={check}>check</button>
