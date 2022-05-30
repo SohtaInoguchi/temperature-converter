@@ -1,3 +1,17 @@
+## How to build and deploy the application
+Execute `npm run deploy`
+This script builds production build and deploy to Github page.
+
+
+## How light/dark mode is implemented
+Added id to div element that is set at the highest App component, so that it wraps all the child components.
+Passed 'theme' state to the id that can be toggled between 'light' and 'dark' with setTheme() function.
+Created two versions of CSS for each class and id that are in child component, one version has #light as parent selector and another has #dark as parent selector so every time the the id is toggled between 'light' and 'dark', the corresponding CSS is applied and changing the color theme.
+
+## Rational behind the UI design and application architecture.
+the solution that you used. Make sure to include the description on the rationale behind the UI design and the application architecture. It would also be good to explain how you came to the decision on which tools or framework to use.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
