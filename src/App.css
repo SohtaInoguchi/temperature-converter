@@ -13,9 +13,18 @@ html, body, #root, #dark{
   background-color: #441462;
 }
 
-#toggle-button {
-  /* position: absolute; */
-  /* z-index: 1; */
+#light #toggle-switch-label {
+  color: black;
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+#dark #toggle-switch-label {
+  color: white;
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
 }
 
 #light #wrapper {

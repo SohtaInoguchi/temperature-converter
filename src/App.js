@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Converter from './component/Converter';
 import { useState, createContext } from 'react';
+import { Switch, FormControlLabel } from '@mui/material';
 
 export const ThemeContext = createContext(null);
 
@@ -16,7 +17,11 @@ function App() {
     <>
       <ThemeContext.Provider value={{theme, toggleTheme}}>
         <div id={theme}>
-           <button onClick={toggleTheme} id='toggle-button'>Toggle mode</button>
+          <FormControlLabel 
+          control={<Switch id='toggle-switch' size='large' onChange={() => toggleTheme()}/>} 
+          label={theme === 'light' ? 'Light mode' : 'Dark mode'}
+          id='toggle-switch-label'
+          />
           <Converter/>
         </div>
       </ThemeContext.Provider>
