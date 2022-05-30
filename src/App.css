@@ -50,6 +50,11 @@ html, body, #root, #dark{
   border-radius: 2rem;
 }
 
+#light #switch-button:hover {
+  background-color: #4c0876;
+  cursor: pointer;
+}
+
 #dark #switch-button {
   display: block;
   margin: 1rem auto;
@@ -58,6 +63,11 @@ html, body, #root, #dark{
   background-color: white;
   color: #8526BF;
   border-radius: 2rem;
+}
+
+#dark #switch-button:hover {
+  background-color: rgb(185, 181, 181);
+  cursor: pointer;
 }
 
 #light .temperature-input {
@@ -102,7 +112,7 @@ html, body, #root, #dark{
 
 #light #convert-button {
   display: block;
-  margin: auto auto;
+  margin: 1rem auto;
   font-size: 2rem;
   padding: 0.5rem 2rem;  
   background-color: #8526BF;
@@ -110,15 +120,27 @@ html, body, #root, #dark{
   border-radius: 2rem;
 }
 
+#light #convert-button:hover {
+  background-color: #4c0876;
+  cursor: pointer;
+}
+
+
 #dark #convert-button {
   display: block;
-  margin: auto auto;
+  margin: 1rem auto;
   font-size: 2rem;
   padding: 0.5rem 2rem;  
   background-color: white;
   color: #8526BF;
   border-radius: 2rem;
 }
+
+#dark #convert-button:hover {
+  background-color: rgb(185, 181, 181);
+  cursor: pointer;
+}
+
 
 /* #converter-form { */
     /* border: solid red; */

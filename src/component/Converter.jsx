@@ -8,11 +8,6 @@ export default function Converter() {
     const [output, setOutput] = useState('');
     const [sourceTemp, setSourceTemp] = useState('celsius');
 
-    const check = (e) => {
-        e.preventDefault();
-        console.log(typeof fahrenheit, typeof celsius);
-      }
-
     const isNumber = (input) => {
       if (input.trim() === '') {
         return false;
@@ -21,11 +16,13 @@ export default function Converter() {
     }      
     
       const convertTemperature = () => {
+        // check if input is valid number
         const inputToBeValidated = sourceTemp === 'celsius' ? celsius : fahrenheit;
         if (!isNumber(inputToBeValidated)) {
           alert('Please enter number');
           return;
         }
+
         let targetTemp;
         if (sourceTemp === 'celsius') {
           // Formula (0°C × 9/5) + 32 = 32°F
@@ -56,12 +53,12 @@ export default function Converter() {
         {
           sourceTemp === 'celsius' &&
           <button id='switch-button' 
-          onClick={switchTempMode}>C &gt; F</button>
+          onClick={switchTempMode}>From &#8451; to &#8457;</button>
         }
         {
           sourceTemp === 'fahrenheit' &&
           <button id='switch-button' 
-          onClick={switchTempMode}>F &gt; C</button>
+          onClick={switchTempMode}>From &#8457; to &#8451;</button>
         }
         
         {
@@ -97,14 +94,13 @@ export default function Converter() {
             {/* </label> */}
           </div>
         }
+        <button onClick={convertTemperature} id='convert-button'>Convert</button>
         {sourceTemp === 'celsius' && 
-          <div id='output'>{`Ceslius: ${output}`} &#8451;</div>
-        }
-        {sourceTemp === 'fahrenheit' &&
           <div id='output'>{`Fahrenheit: ${output}`} &#8457;</div>
         }
-        <button onClick={convertTemperature} id='convert-button'>Convert</button>
-        <button onClick={check}>check</button>
+        {sourceTemp === 'fahrenheit' &&
+          <div id='output'>{`Celsius: ${output}`} &#8451;</div>
+        }
       {/* </section> */}
     </div>  
     )
