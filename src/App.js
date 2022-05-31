@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Converter from './component/Converter';
 import { useState, createContext } from 'react';
