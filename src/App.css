@@ -13,50 +13,50 @@ html, body, #root, #dark{
   background-color: #441462;
 }
 
-#light #toggle-switch-label {
-  color: black;
+#light #toggle-switch-label, #dark #toggle-switch-label {
   position: absolute;
   top: 4rem;
   left: 4rem;
+}
+
+#light #toggle-switch-label {
+  color: black;
 }
 
 #dark #toggle-switch-label {
   color: white;
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
 }
 
-#light #wrapper {
+#light #wrapper, #dark #wrapper {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 2rem 2rem;
-  background-color: white;
   border-radius: 1rem;
+}
+
+#light #wrapper {
+  background-color: white;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem lightgray;
 }
 
 #dark #wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2rem 2rem;
   background-color: #591185;
-  border-radius: 1rem;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #9e63ba;
 }
 
-#light #switch-button {
+#light #switch-button, #dark #switch-button {
   display: block;
   margin: 1rem auto;
   font-size: 2rem;
   padding: 0.5rem 2rem;
+  border-radius: 2rem;
+}
+
+#light #switch-button {
   background-color: #8526BF;
   color: white;
-  border-radius: 2rem;
 }
 
 #light #switch-button:hover {
@@ -65,13 +65,8 @@ html, body, #root, #dark{
 }
 
 #dark #switch-button {
-  display: block;
-  margin: 1rem auto;
-  font-size: 2rem;
-  padding: 0.5rem 2rem;
   background-color: white;
   color: #8526BF;
-  border-radius: 2rem;
 }
 
 #dark #switch-button:hover {
@@ -79,32 +74,19 @@ html, body, #root, #dark{
   cursor: pointer;
 }
 
-#light .temperature-input {
+#light .temperature-input, #dark .temperature-input {
   display: flex;
   justify-content: center;
   font-size: 2rem;
   padding: 0.5rem 2rem;  
 }
 
-#dark .temperature-input {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  padding: 0.5rem 2rem;  
-  color: white;
-}
-
-#light .inputs {
+#light .inputs, #dark .inputs {
   height: 2rem;
   width: 12rem;
 }
 
-#dark .inputs {
-  height: 2rem;
-  width: 12rem;
-}
-
-#light #output {
+#light #output, #dark #output {
   text-align: center;
   font-size: 2rem;
   margin: 0.5rem auto;
@@ -112,21 +94,20 @@ html, body, #root, #dark{
 }
 
 #dark #output {
-  text-align: center;
-  font-size: 2rem;
-  padding: 0.5rem 2rem;  
-  margin: 0.5rem auto;
   color: white;
 }
 
-#light #convert-button {
+#light #convert-button, #dark #convert-button {
   display: block;
   margin: 1rem auto;
   font-size: 2rem;
   padding: 0.5rem 2rem;  
+  border-radius: 2rem;
+}
+
+#light #convert-button {
   background-color: #8526BF;
   color: white;
-  border-radius: 2rem;
 }
 
 #light #convert-button:hover {
@@ -136,29 +117,12 @@ html, body, #root, #dark{
 
 
 #dark #convert-button {
-  display: block;
-  margin: 1rem auto;
-  font-size: 2rem;
-  padding: 0.5rem 2rem;  
   background-color: white;
   color: #8526BF;
-  border-radius: 2rem;
 }
 
 #dark #convert-button:hover {
   background-color: rgb(185, 181, 181);
   cursor: pointer;
 }
-
-
-/* #converter-form { */
-    /* border: solid red; */
-    /* position: absolute; */
-    /* width: 50%;
-    height: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-  /* } */
-
 
