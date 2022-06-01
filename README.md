@@ -3,6 +3,11 @@ This application can be accessed at below url.<br/>
 https://SohtaInoguchi.github.io/temperature-converter
 
 
+## How to install onto local computer
+- Git clone the repository.<br/>
+- `npm install` to install all the dependencies.
+
+
 ## How to build and deploy the application
 Execute `npm run deploy`<br/>
 This script builds production build and deploy to Github page.
